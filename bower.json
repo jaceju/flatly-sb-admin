@@ -1,0 +1,22 @@
+{
+  "name": "flatly-sb-admin",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jaceju/flatly-sb-admin",
+  "authors": [
+    "Jace Ju <jaceju@gmail.com>"
+  ],
+  "description": "Admin Template with Bootstrap 3",
+  "main": "css/bootstrap.css",
+  "keywords": [
+    "Bootstrap",
+    "Template"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
