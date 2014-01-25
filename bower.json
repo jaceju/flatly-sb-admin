@@ -4,7 +4,14 @@
   "homepage": "https://github.com/jaceju/flatly-sb-admin",
   "authors": [
     "Jace Ju <jaceju@gmail.com>"
-  ],
+  ],  
+  "dependencies": {
+    "jquery": "~1.10",
+    "datatables": ">=1.9",
+    "jquery-flot": ">=0.8",
+    "morris.js": ">=0.4",
+    "metisMenu": "*"
+  },
   "description": "Admin Template with Bootstrap 3",
   "main": "css/bootstrap.css",
   "keywords": [
