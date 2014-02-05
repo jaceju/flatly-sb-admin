@@ -4,16 +4,22 @@
   "homepage": "https://github.com/jaceju/flatly-sb-admin",
   "authors": [
     "Jace Ju <jaceju@gmail.com>"
-  ],  
+  ],
   "dependencies": {
     "jquery": "~1.10",
+    "font-awesome": ">=4.0",
     "datatables": ">=1.9",
     "jquery-flot": ">=0.8",
     "morris.js": ">=0.4",
-    "metisMenu": "*"
+    "metisMenu": "*",
+    "flot.tooltip": "*",
+    "datatables-bootstrap3": "*"
   },
   "description": "Admin Template with Bootstrap 3",
-  "main": "css/bootstrap.css",
+  "main": [
+    "js/bootstrap.js",
+    "css/bootstrap.css"
+  ],
   "keywords": [
     "Bootstrap",
     "Template"
@@ -23,7 +29,10 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "vendor",
     "test",
-    "tests"
+    "tests",
+    "js/demo",
+    "css/plugins"
   ]
 }
