@@ -43,4 +43,16 @@ angular.module('sbAdminDirectives', []).
             replace: true,
             templateUrl: '../partial/sidebar.html'
         };
+    }).
+    directive('sbMetisMenu', function () {
+        return {
+            restrict: 'A',
+            replace: false,
+            transclude: false,
+            compile: function (element, attrs) {
+                return function (scope, element, attrs, controller) {
+                    element.metisMenu();
+                };
+            }
+        };
     });
