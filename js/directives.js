@@ -9,6 +9,27 @@ angular.module('sbAdminDirectives', []).
             templateUrl: '../partial/top-nav.html'
         };
     }).
+    directive('sbTopNavMessages', function() {
+        return {
+            restrict: "E",
+            replace: true,
+            templateUrl: '../partial/top-nav-messages.html'
+        };
+    }).
+    directive('sbTopNavTasks', function() {
+        return {
+            restrict: "E",
+            replace: true,
+            templateUrl: '../partial/top-nav-tasks.html'
+        };
+    }).
+    directive('sbTopNavAlerts', function() {
+        return {
+            restrict: "E",
+            replace: true,
+            templateUrl: '../partial/top-nav-alerts.html'
+        };
+    }).
     directive('sbTopNavUser', function() {
         return {
             restrict: "E",
