@@ -11,10 +11,30 @@
     <!-- /.navbar-header -->
 
     <ul class="nav navbar-top-links navbar-right">
-        <sb-top-nav-messages></sb-top-nav-messages>
-        <sb-top-nav-tasks></sb-top-nav-tasks>
-        <sb-top-nav-alerts></sb-top-nav-alerts>
-        <sb-top-nav-user></sb-top-nav-user>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <sb-top-nav-messages></sb-top-nav-messages>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <sb-top-nav-tasks></sb-top-nav-tasks>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <sb-top-nav-alerts></sb-top-nav-alerts>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <sb-top-nav-user></sb-top-nav-user>
+        </li>
     </ul>
     <!-- /.navbar-top-links -->
 </nav>
