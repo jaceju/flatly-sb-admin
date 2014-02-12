@@ -1,4 +1,7 @@
 'use strict';
 
-var sbAdminApp = angular.module('sbAdminApp', ['sbAdminDirectives']);
+var angular = window.angular;
 
+(function () {
+    angular.module('sbAdminApp', ['sbAdminModule']);
+})();
