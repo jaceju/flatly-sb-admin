@@ -77,4 +77,32 @@ angular.module('sbAdminModule', []).
                 element.dataTable();
             }
         };
+    }).
+    directive('sbTooltip', function () {
+        return {
+            restrict: 'A',
+            replace: false,
+            transclude: false,
+            link: function (scope, element) {
+                element.tooltip({
+                    selector: "[data-toggle=tooltip]",
+                    container: "body"
+                });
+            }
+        };
+    }).
+    directive('sbPopover', function () {
+        return {
+            restrict: 'A',
+            replace: false,
+            transclude: false,
+            link: function (scope, element) {
+                element.find('[data-toggle=popover]').popover();
+            }
+        };
     });
+
+
+// popover demo
+$("[data-toggle=popover]")
+    .popover()
