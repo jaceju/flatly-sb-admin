@@ -40,8 +40,12 @@
                 "route": "/ui-elements/notifications"
             },
             {
-                "name": "typography",
+                "name": "Typography",
                 "route": "/ui-elements/typography"
+            },
+            {
+                "name": "Grid",
+                "route": "/ui-elements/grid"
             }
         ]
     }
