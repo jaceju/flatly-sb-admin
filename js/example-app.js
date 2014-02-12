@@ -3,7 +3,7 @@
 var angular = window.angular;
 
 (function () {
-    var app = angular.module('sbAdminApp', ['sbAdminModule', 'ngRoute']);
+    var app = angular.module('sbAdminApp', ['sbAdminModule', 'sbFlotModule', 'ngRoute']);
     app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/', {
@@ -11,7 +11,8 @@ var angular = window.angular;
                 controller: 'SbDashboardCtrl'
             }).
             when('/charts/flot', {
-                templateUrl: '../partial/flot.html'
+                templateUrl: '../partial/flot.html',
+                controller: 'SbFlotCtrl'
             }).
             when('/charts/morris', {
                 templateUrl: '../partial/morris.html',
@@ -153,6 +154,9 @@ var angular = window.angular;
             hideHover: 'auto',
             resize: true
         });
+    }).
+    controller('SbFlotCtrl', function () {
+
     }).
     controller('SbMorrisCtrl', function () {
         Morris.Area({
