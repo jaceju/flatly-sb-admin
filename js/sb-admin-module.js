@@ -67,4 +67,14 @@ angular.module('sbAdminModule', []).
                 });
             }
         };
-    }]);
+    }]).
+    directive('sbDatatables', function () {
+        return {
+            restrict: 'A',
+            replace: false,
+            transclude: false,
+            link: function (scope, element) {
+                element.dataTable();
+            }
+        };
+    });
