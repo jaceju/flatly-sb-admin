@@ -40,6 +40,9 @@ body {
 /* ------------------------------- */
 
 /* Top Right Navigation Dropdown Styles */
+.navbar-top-links {
+    margin-top: 5px;
+}
 
 .navbar-top-links li {
     display: inline-block;
