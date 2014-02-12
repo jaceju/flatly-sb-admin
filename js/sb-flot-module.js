@@ -1110,7 +1110,7 @@ angular.module('sbFlotModule', []).
                         });
                     }
 
-                    doPlot("right");
+                    doPlot('right');
                 };
             }
         };
