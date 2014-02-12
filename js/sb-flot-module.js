@@ -1068,16 +1068,16 @@ angular.module('sbFlotModule', []).
                     ];
 
                     function euroFormatter(v, axis) {
-                        return v.toFixed(axis.tickDecimals) + "€";
+                        return v.toFixed(axis.tickDecimals) + '€';
                     }
 
                     function doPlot(position) {
                         $.plot(element, [{
                             data: oilprices,
-                            label: "Oil price ($)"
+                            label: 'Oil price ($)'
                         }, {
                             data: exchangerates,
-                            label: "USD/EUR exchange rate",
+                            label: 'USD/EUR exchange rate',
                             yaxis: 2
                         }], {
                             xaxes: [{
@@ -1087,7 +1087,7 @@ angular.module('sbFlotModule', []).
                                 min: 0
                             }, {
                                 // align if we are to the right
-                                alignTicksWithAxis: position == "right" ? 1 : null,
+                                alignTicksWithAxis: position == 'right' ? 1 : null,
                                 position: position,
                                 tickFormatter: euroFormatter
                             }],
@@ -1099,8 +1099,8 @@ angular.module('sbFlotModule', []).
                             },
                             tooltip: true,
                             tooltipOpts: {
-                                content: "%s for %x was %y",
-                                xDateFormat: "%y-%0m-%0d",
+                                content: '%s for %x was %y',
+                                xDateFormat: '%y-%0m-%0d',
 
                                 onHover: function(flotItem, $tooltipEl) {
                                     // console.log(flotItem, $tooltipEl);
