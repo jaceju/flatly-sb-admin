@@ -6,49 +6,49 @@ angular.module('sbAdminModule', []).
             scope: {
                 title: '='
             },
-            templateUrl: '../partial/top-nav.html'
+            templateUrl: '../partial/layouts/top-nav.html'
         };
     }).
     directive('sbTopNavMessages', function() {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/top-nav-messages.html'
+            templateUrl: '../partial/layouts/top-nav-messages.html'
         };
     }).
     directive('sbTopNavTasks', function() {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/top-nav-tasks.html'
+            templateUrl: '../partial/layouts/top-nav-tasks.html'
         };
     }).
     directive('sbTopNavAlerts', function() {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/top-nav-alerts.html'
+            templateUrl: '../partial/layouts/top-nav-alerts.html'
         };
     }).
     directive('sbTopNavUser', function() {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/top-nav-user.html'
+            templateUrl: '../partial/layouts/top-nav-user.html'
         };
     }).
     directive('sbSidebar', function () {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/sidebar.html'
+            templateUrl: '../partial/layouts/sidebar.html'
         };
     }).
     directive('sbSidebarSearch', function () {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/sidebar-search.html'
+            templateUrl: '../partial/layouts/sidebar-search.html'
         };
     }).
     directive('sbSidebarMenus', ['$http', '$timeout', function ($http, $timeout) {
