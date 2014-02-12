@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Dashboard",
+        "route": "/"
+    },
+    {
+        "name": "Charts",
+        "subMenus": [
+            {
+                "name": "Flot Charts",
+                "route": "/charts/flot"
+            },
+            {
+                "name": "Morris Charts",
+                "route": "/charts/morris"
+            }
+        ]
+    },
+    {
+        "name": "Tables",
+        "route": "/tables"
+    },
+    {
+        "name": "Forms",
+        "route": "/forms"
+    },
+    {
+        "name": "UI Elements",
+        "subMenus": [
+            {
+                "name": "Panels and Wells",
+                "route": "/ui-elements/panels-wells"
+            },
+            {
+                "name": "Buttons",
+                "route": "/ui-elements/buttons"
+            },
+            {
+                "name": "Notifications",
+                "route": "/ui-elements/notifications"
+            },
+            {
+                "name": "typography",
+                "route": "/ui-elements/typography"
+            }
+        ]
+    }
+]
