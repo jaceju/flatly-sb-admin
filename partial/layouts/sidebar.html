@@ -6,10 +6,10 @@
                     <sb-sidebar-search></sb-sidebar-search>
                 </li>
                 <li ng-repeat="menu in menus">
-                    <a href="{{ menu.route }}">{{ menu.name }}<span class="fa arrow" ng-if="menu.subMenus"></span></a>
+                    <a href="#{{ menu.route }}">{{ menu.name }}<span class="fa arrow" ng-if="menu.subMenus"></span></a>
                     <ul class="nav nav-second-level" ng-if="menu.subMenus">
                         <li ng-repeat="subMenu in menu.subMenus">
-                            <a href="{{ subMenu.route  }}">{{ subMenu.name }}</a>
+                            <a href="#{{ subMenu.route  }}">{{ subMenu.name }}</a>
                         </li>
                     </ul>
                 </li>
