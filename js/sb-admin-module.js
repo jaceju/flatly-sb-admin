@@ -105,8 +105,3 @@ angular.module('sbAdminModule', []).
             }
         };
     });
-
-
-// popover demo
-$("[data-toggle=popover]")
-    .popover()
