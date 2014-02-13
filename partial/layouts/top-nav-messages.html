@@ -1,40 +1,16 @@
 <ul class="dropdown-menu dropdown-messages">
-    <li>
+    <li ng-repeat-start="message in messages">
         <a href="#">
             <div>
-                <strong>John Smith</strong>
+                <strong>{{ message.name }}</strong>
                 <span class="pull-right text-muted">
-                    <em>Yesterday</em>
+                    <em>{{ message.createdAt }}</em>
                 </span>
             </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+            <div>{{ message.content }}</div>
         </a>
     </li>
-    <li class="divider"></li>
-    <li>
-        <a href="#">
-            <div>
-                <strong>John Smith</strong>
-                <span class="pull-right text-muted">
-                    <em>Yesterday</em>
-                </span>
-            </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-        </a>
-    </li>
-    <li class="divider"></li>
-    <li>
-        <a href="#">
-            <div>
-                <strong>John Smith</strong>
-                <span class="pull-right text-muted">
-                    <em>Yesterday</em>
-                </span>
-            </div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-        </a>
-    </li>
-    <li class="divider"></li>
+    <li class="divider" ng-repeat-end></li>
     <li>
         <a class="text-center" href="#">
             <strong>Read All Messages</strong>

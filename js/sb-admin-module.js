@@ -9,13 +9,23 @@ angular.module('sbAdminModule', []).
             templateUrl: '../partial/layouts/top-nav.html'
         };
     }).
-    directive('sbTopNavMessages', function() {
+    directive('sbTopNavMessages', ['$http', function($http) {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/layouts/top-nav-messages.html'
+            templateUrl: '../partial/layouts/top-nav-messages.html',
+            link: function (scope, element, attrs) {
+                if (!attrs.messagesUrl) {
+                    throw new Error('Attribute "messages-url" should be defined.')
+                }
+
+                scope.messages = [];
+                $http.get(attrs.messagesUrl).success(function (data) {
+                    scope.messages = data;
+                });
+            }
         };
-    }).
+    }]).
     directive('sbTopNavTasks', function() {
         return {
             restrict: 'E',
