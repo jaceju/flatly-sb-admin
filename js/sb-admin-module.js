@@ -26,13 +26,23 @@ angular.module('sbAdminModule', []).
             }
         };
     }]).
-    directive('sbTopNavTasks', function() {
+    directive('sbTopNavTasks', ['$http', function($http) {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/layouts/top-nav-tasks.html'
+            templateUrl: '../partial/layouts/top-nav-tasks.html',
+            link: function (scope, element, attrs) {
+                if (!attrs.from) {
+                    throw new Error('Attribute "from" should be defined.')
+                }
+
+                scope.tasks = [];
+                $http.get(attrs.from).success(function (data) {
+                    scope.tasks = data;
+                });
+            }
         };
-    }).
+    }]).
     directive('sbTopNavAlerts', function() {
         return {
             restrict: 'E',

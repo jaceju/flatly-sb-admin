@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Task 1",
+        "min": 0,
+        "max": 100,
+        "now": 40,
+        "status": "success"
+    },
+    {
+        "name": "Task 2",
+        "min": 0,
+        "max": 100,
+        "now": 20,
+        "status": "info"
+    },
+    {
+        "name": "Task 3",
+        "min": 0,
+        "max": 100,
+        "now": 60,
+        "status": "warning"
+    },
+    {
+        "name": "Task 4",
+        "min": 0,
+        "max": 100,
+        "now": 80,
+        "status": "danger"
+    }
+]
