@@ -15,12 +15,12 @@ angular.module('sbAdminModule', []).
             replace: true,
             templateUrl: '../partial/layouts/top-nav-messages.html',
             link: function (scope, element, attrs) {
-                if (!attrs.messagesUrl) {
+                if (!attrs.from) {
                     throw new Error('Attribute "messages-url" should be defined.')
                 }
 
                 scope.messages = [];
-                $http.get(attrs.messagesUrl).success(function (data) {
+                $http.get(attrs.from).success(function (data) {
                     scope.messages = data;
                 });
             }
