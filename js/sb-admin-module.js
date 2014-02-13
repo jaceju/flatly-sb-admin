@@ -43,13 +43,23 @@ angular.module('sbAdminModule', []).
             }
         };
     }]).
-    directive('sbTopNavAlerts', function() {
+    directive('sbTopNavAlerts', ['$http', function($http) {
         return {
             restrict: 'E',
             replace: true,
-            templateUrl: '../partial/layouts/top-nav-alerts.html'
+            templateUrl: '../partial/layouts/top-nav-alerts.html',
+            link: function (scope, element, attrs) {
+                if (!attrs.from) {
+                    throw new Error('Attribute "from" should be defined.')
+                }
+
+                scope.alerts = [];
+                $http.get(attrs.from).success(function (data) {
+                    scope.alerts = data;
+                });
+            }
         };
-    }).
+    }]).
     directive('sbTopNavUser', function() {
         return {
             restrict: 'E',

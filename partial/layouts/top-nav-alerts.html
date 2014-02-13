@@ -1,49 +1,18 @@
 <ul class="dropdown-menu dropdown-alerts">
-    <li>
+    <li ng-repeat-start="alert in alerts">
         <a href="#">
             <div>
-                <i class="fa fa-comment fa-fw"></i> New Comment
-                <span class="pull-right text-muted small">4 minutes ago</span>
+                <i class="fa fa-comment fa-fw" ng-class="{
+                    'fa-comment': (alert.type === 'comment'),
+                    'fa-twitter': (alert.type === 'follower'),
+                    'fa-envelope': (alert.type === 'message'),
+                    'fa-upload': (alert.type === 'action')
+                }"></i> {{ alert.content }}
+                <span class="pull-right text-muted small">{{ alert.lastTime }}</span>
             </div>
         </a>
     </li>
-    <li class="divider"></li>
-    <li>
-        <a href="#">
-            <div>
-                <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                <span class="pull-right text-muted small">12 minutes ago</span>
-            </div>
-        </a>
-    </li>
-    <li class="divider"></li>
-    <li>
-        <a href="#">
-            <div>
-                <i class="fa fa-envelope fa-fw"></i> Message Sent
-                <span class="pull-right text-muted small">4 minutes ago</span>
-            </div>
-        </a>
-    </li>
-    <li class="divider"></li>
-    <li>
-        <a href="#">
-            <div>
-                <i class="fa fa-tasks fa-fw"></i> New Task
-                <span class="pull-right text-muted small">4 minutes ago</span>
-            </div>
-        </a>
-    </li>
-    <li class="divider"></li>
-    <li>
-        <a href="#">
-            <div>
-                <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                <span class="pull-right text-muted small">4 minutes ago</span>
-            </div>
-        </a>
-    </li>
-    <li class="divider"></li>
+    <li class="divider" ng-repeat-end></li>
     <li>
         <a class="text-center" href="#">
             <strong>See All Alerts</strong>
