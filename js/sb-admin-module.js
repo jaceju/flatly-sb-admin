@@ -56,9 +56,13 @@ angular.module('sbAdminModule', []).
             restrict: 'A',
             replace: false,
             transclude: false,
-            link: function (scope, element) {
+            link: function (scope, element, attrs) {
+                if (!attrs.menusUrl) {
+                    throw new Error('Attribute "menus-url" should be defined.')
+                }
+
                 scope.menus = [];
-                $http.get('/examples/json/menus.json').success(function (data) {
+                $http.get(attrs.menusUrl).success(function (data) {
                     scope.menus = data;
 
                     $timeout(function () {
