@@ -16,7 +16,7 @@ angular.module('sbAdminModule', []).
             templateUrl: '../partial/layouts/top-nav-messages.html',
             link: function (scope, element, attrs) {
                 if (!attrs.from) {
-                    throw new Error('Attribute "messages-url" should be defined.')
+                    throw new Error('Attribute "from" should be defined.')
                 }
 
                 scope.messages = [];
