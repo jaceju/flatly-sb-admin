@@ -19,28 +19,37 @@ var angular = window.angular;
                 controller: 'SbMorrisCtrl'
             }).
             when('/tables', {
-                templateUrl: '../partial/tables.html'
+                templateUrl: '../partial/tables.html',
+                controller: 'SbTablesCtrl'
             }).
             when('/forms', {
-                templateUrl: '../partial/forms.html'
+                templateUrl: '../partial/forms.html',
+                controller: 'SbFormsCtrl'
             }).
             when('/ui-elements/panels-wells', {
-                templateUrl: '../partial/panels-wells.html'
+                templateUrl: '../partial/panels-wells.html',
+                controller: 'SbPanelsWellsCtrl'
             }).
             when('/ui-elements/buttons', {
-                templateUrl: '../partial/buttons.html'
+                templateUrl: '../partial/buttons.html',
+                controller: 'SbButtonsCtrl'
             }).
             when('/ui-elements/notifications', {
-                templateUrl: '../partial/notifications.html'
+                templateUrl: '../partial/notifications.html',
+                controller: 'SbNotificationsCtrl'
             }).
             when('/ui-elements/typography', {
-                templateUrl: '../partial/typography.html'
+                templateUrl: '../partial/typography.html',
+                controller: 'SbTypographyCtrl'
             }).
             when('/ui-elements/grid', {
-                templateUrl: '../partial/grid.html'
+                templateUrl: '../partial/grid.html',
+                controller: 'SbGridCtrl'
             });
     }]).
-    controller('SbDashboardCtrl', function () {
+    controller('SbDashboardCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Dashboard';
+
         Morris.Area({
             element: 'morris-area-chart',
             data: [{
@@ -155,10 +164,12 @@ var angular = window.angular;
             resize: true
         });
     }).
-    controller('SbFlotCtrl', function () {
-
+    controller('SbFlotCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Flot Charts';
     }).
-    controller('SbMorrisCtrl', function () {
+    controller('SbMorrisCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Morris Charts';
+
         Morris.Area({
             element: 'morris-area-chart',
             data: [{
@@ -310,5 +321,26 @@ var angular = window.angular;
             hideHover: 'auto',
             resize: true
         });
+    }).
+    controller('SbTablesCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Tables';
+    }).
+    controller('SbFormsCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Forms';
+    }).
+    controller('SbPanelsWellsCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Panels and Wells';
+    }).
+    controller('SbButtonsCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Buttons';
+    }).
+    controller('SbNotificationsCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Notifications';
+    }).
+    controller('SbTypographyCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Typography';
+    }).
+    controller('SbGridCtrl', function ($scope) {
+        $scope.$parent.pageHeader = 'Grid';
     });
 })();
